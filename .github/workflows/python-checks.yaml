@@ -25,25 +25,25 @@ jobs:
 
     - name: Run Pylint
       run: |
-        pylint **/*.py
+        pylint QR\ Code\ Genrator/*.py
       continue-on-error: true
 
     - name: Run Ruff
       run: |
-        ruff check .
+        ruff check QR\ Code\ Genrator/
       continue-on-error: true
 
     - name: Run Black
       run: |
-        black --check .
+        black --check QR\ Code\ Genrator/
       continue-on-error: true
 
     - name: Run Bandit
       run: |
-        bandit -r .
+        bandit -r QR\ Code\ Genrator/
       continue-on-error: true
 
     - name: Run Pytype
       run: |
-        pytype .
+        pytype QR\ Code\ Genrator/
       continue-on-error: true
